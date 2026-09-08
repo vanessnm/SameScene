@@ -36,14 +36,12 @@ modal.addEventListener('click', function (event) {
 
 // Menu latéral
 
-const openMenu = document.getElementById('openMenu');
-const closeMenu = document.getElementById('closeMenu');
-const sideMenu = document.getElementById('sideMenu');
-
 openMenu.addEventListener('click', function () {
     sideMenu.classList.add('open');
+    document.body.classList.add('menu-open');
 });
 
 closeMenu.addEventListener('click', function () {
     sideMenu.classList.remove('open');
+    document.body.classList.remove('menu-open');
 });

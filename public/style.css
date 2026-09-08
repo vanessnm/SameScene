@@ -11,6 +11,7 @@ body {
     font-family: 'DM Sans', sans-serif;
     background: #ffffff;
     color: #181524;
+    overflow-x: hidden;
 }
 /* =========================
    MENU LATÉRAL
@@ -67,6 +68,20 @@ body {
 
 .side-menu.open {
     transform: translateX(0);
+}
+body.menu-open .top-header,
+body.menu-open main,
+body.menu-open footer {
+    margin-left: 270px;
+    width: calc(100% - 270px);
+}
+
+.top-header,
+main,
+footer {
+    transition:
+        margin-left 0.3s ease,
+        width 0.3s ease;
 }
 
 
