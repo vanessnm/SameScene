@@ -11,10 +11,11 @@ loginButton.addEventListener('click', function () {
     modal.classList.add('show');
 });
 
-
-closeModal.addEventListener('click', function () {
-    modal.classList.remove('show');
-});
+if (closeModal) {
+    closeModal.addEventListener('click', function () {
+        modal.classList.remove('show');
+    });
+}
 
 
 heartButtons.forEach(function (button) {
@@ -26,13 +27,13 @@ heartButtons.forEach(function (button) {
 });
 
 
-modal.addEventListener('click', function (event) {
-
-    if (event.target === modal) {
-        modal.classList.remove('show');
-    }
-
-});
+if (modal) {
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.classList.remove('show');
+        }
+    });
+}
 
 // Menu latéral
 

@@ -965,3 +965,175 @@ footer {
     }
 
 }
+
+/* =========================
+   PAGE SERIES
+========================= */
+
+.series-top {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(10, 12, 28, 0.98) 0%,
+            rgba(10, 12, 28, 0.85) 35%,
+            rgba(10, 12, 28, 0.20) 70%,
+            rgba(10, 12, 28, 0.10) 100%
+        ),
+        url("images/series-hero.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.series-top .top-header {
+    background: transparent;
+}
+
+.series-hero {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    padding: 40px 4%;
+}
+
+/* Barre de recherche et filtres */
+
+.series-filters {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 4%;
+    background: #111321;
+    border-top: 1px solid #2a2d42;
+    border-bottom: 1px solid #2a2d42;
+}
+
+.series-search {
+    flex: 1;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 18px;
+    background: #1a1d2e;
+    border: 1px solid #34374d;
+    border-radius: 24px;
+    color: #d3d0df;
+}
+
+.series-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.series-search input::placeholder {
+    color: #9d9aac;
+}
+
+.series-filters select {
+    height: 44px;
+    padding: 0 38px 0 18px;
+    border: 1px solid #34374d;
+    border-radius: 24px;
+    background: #1a1d2e;
+    color: #ffffff;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.clear-filters {
+    border: none;
+    background: transparent;
+    color: #c4bdd7;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.all-series {
+    padding: 28px 4% 50px;
+    background: #111321;
+    color: #ffffff;
+    min-height: 500px;
+}
+
+.series-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.series-list-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.series-list-header h2 span {
+    color: #aaa6b8;
+    font-weight: 400;
+}
+
+.view-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.view-buttons button {
+    padding: 9px 16px;
+    border: 1px solid #34374d;
+    border-radius: 10px;
+    background: transparent;
+    color: #ffffff;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.view-buttons button.active {
+    background: #6f42a8;
+    border-color: #6f42a8;
+}
+
+/* Couleurs du header sur la page Series */
+
+.series-top .brand h1 {
+    color: #ffffff;
+}
+
+.series-top .brand h1 span {
+    color: #8e98d7;
+}
+
+.series-top .brand p {
+    color: #c7c4d1;
+}
+
+.series-top .main-nav a {
+    color: #ffffff;
+}
+
+.series-top .login-button {
+    color: #ffffff;
+}
+
+.series-top .search-box {
+    background: rgba(255, 255, 255, 0.92);
+}
+
+.series-top .series-hero-content h2 {
+    color: #ffffff;
+}
+
+.series-top .series-hero-content h2 span {
+    color: #8e98d7;
+}
+
+.series-top .series-hero-content p {
+    color: #d3d0df;
+}
