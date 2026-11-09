@@ -1137,3 +1137,288 @@ footer {
 .series-top .series-hero-content p {
     color: #d3d0df;
 }
+
+/* =========================
+   LISTE DES SERIES
+========================= */
+
+.series-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.series-list-card {
+    min-height: 190px;
+    display: flex;
+    align-items: stretch;
+
+    background: #191b2b;
+    border: 1px solid #2f3247;
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+/* Affiche */
+
+.series-list-poster {
+    width: 145px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    padding: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #243249,
+            #667187
+        );
+
+    color: #ffffff;
+
+    font-family: 'Italianno', cursive;
+    font-size: 34px;
+}
+
+/* Informations */
+
+.series-list-info {
+    flex: 1;
+    padding: 24px 26px;
+}
+
+.series-list-info h3 {
+    margin: 0 0 7px;
+
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.series-meta {
+    margin: 0 0 16px;
+
+    color: #aaa6b8;
+    font-size: 13px;
+}
+
+.series-description {
+    max-width: 760px;
+
+    margin: 0 0 18px;
+
+    color: #d3d0df;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Genres */
+
+.series-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.series-tags span {
+    padding: 6px 12px;
+
+    border: 1px solid #444760;
+    border-radius: 20px;
+
+    background: #242638;
+
+    color: #d8d5e1;
+
+    font-size: 12px;
+}
+
+/* Actions à droite */
+
+.series-list-actions {
+    width: 185px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    padding: 24px;
+}
+
+.series-favorite {
+    border: none;
+    background: transparent;
+
+    color: #c7c4d1;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.series-favorite:hover {
+    color: #8e98d7;
+}
+
+.series-arrow {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #8e98d7;
+
+    color: #ffffff;
+
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* =========================
+   FAN GROUPS
+========================= */
+
+.fan-groups-page {
+    background: #ffffff;
+    padding: 32px 4% 70px;
+}
+
+.fan-groups-search {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    max-width: 1180px;
+    margin: 0 auto 38px;
+}
+
+.group-search-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 46px;
+    padding: 0 16px;
+    border: 1px solid #dddded;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.group-search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font: inherit;
+    background: transparent;
+}
+
+.create-group-button {
+    height: 46px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 8px;
+    background: #8e98d7;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.fan-groups-hero-content p {
+    color: #8e98d7; 
+}
+
+.fan-groups-hero-content {
+    max-width: 520px;
+    margin-left: 4%;
+}
+
+.fan-groups-hero-content h2 {
+    margin: 0 0 12px;
+    font-family: "Sacramento", cursive;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+    color: #8e98d7;
+}
+
+.fan-groups-hero-content h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+.fan-groups-hero-content p {
+    max-width: 470px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.fan-group-cards {
+    display: flex;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.fan-group-card {
+    width: 260px;
+    overflow: hidden;
+    background: #171b2e;
+    border: 1px solid #343956;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.fan-group-image {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #272b43;
+}
+
+.fan-group-info {
+    padding: 14px;
+}
+
+.fan-group-info h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+}
+
+.fan-group-info p {
+    min-height: 42px;
+    margin: 0 0 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #c5c7d4;
+}
+
+.group-members {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 12px;
+    color: #b9bbca;
+}
+
+.join-group-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #8e98d7;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
