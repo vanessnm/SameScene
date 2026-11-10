@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
     <title>SameScene</title>
 </head>
 
-<body>
+<body class="home-page">
 <!-- MENU LATÉRAL -->
 
-<button class="menu-button" id="openMenu">
+<button class="menu-button" id="openMenu" aria-label="Open menu" aria-controls="sideMenu">
     ☰
 </button>
 
 <aside class="side-menu" id="sideMenu">
 
-    <button class="close-menu" id="closeMenu">
+    <button class="close-menu" id="closeMenu" aria-label="Close menu">
         ×
     </button>
 
@@ -27,7 +28,7 @@
 
     <nav class="side-navigation">
 
-        <a href="index.html" class="active">
+        <a href="index.html" class="active" aria-current="page">
     <svg class="menu-icon menu-icon-filled" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 2.8L2.5 10.5L4.1 12.4L5.5 11.3V21H10V15H14V21H18.5V11.3L19.9 12.4L21.5 10.5L12 2.8Z"/>
     </svg>
@@ -43,7 +44,7 @@
     </svg>
     Series
 </a>
-        <a href="#">
+        <a href="fan-groups.html">
     <svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true">
         <circle cx="12" cy="8" r="3"/>
         <circle cx="5.5" cy="10" r="2.3"/>
@@ -91,38 +92,43 @@
 
         <div class="menu-separator"></div>
 
-        <a href="#">ⓘ About</a>
-        <a href="#">? Help</a>
+        <a href="#"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg>About</a>
+        <a href="#"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 .5c0 1.5-2.5 2-2.5 3.5m0 3h.01"/></svg>Help</a>
 
     </nav>
-
+    <div class="side-bottom">
+        <img class="side-floral" src="images/home/floral.png" alt="Same Interests. Brighter Stories.">
+        <div class="side-social"><span role="img" aria-label="Instagram"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></span><span role="img" aria-label="TikTok"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v12a4 4 0 1 1-4-4m4-8c1 3 3 5 6 5"/></svg></span><span role="img" aria-label="YouTube"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="4" fill="currentColor" stroke="none"/><path d="m10 8 6 4-6 4z" fill="#201d34" stroke="none"/></svg></span><span role="img" aria-label="Discord"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 4 6a23 23 0 0 0-3 12l5 2 2-3m8-12 4 1a23 23 0 0 1 3 12l-5 2-2-3M6 16q6 4 12 0M8 12h.01m8 0h.01"/></svg></span></div>
+        <p class="side-copyright">© 2026 SameScene<br>Watch. Share. Connect.</p>
+    </div>
 </aside>
 
 
     <header class="top-header series-header">
 
         <div class="brand">
-            <h1>Same<span>Scene</span></h1>
+            <h1>Same<span>Scene</span><span class="brand-heart" aria-hidden="true">♡</span></h1>
             <p>Watch. Share. Connect.</p>
         </div>
 
         <nav class="main-nav">
-            <a href="#" class="active">Home</a>
+            <a href="#" class="active" aria-current="page">Home</a>
             <a href="series.html">Series</a>
         </nav>
 
         <div class="header-actions">
 
             <div class="search-box">
-                <span class="search-icon">⌕</span>
+                <svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg>
                 <input
-                    type="text"
+                    type="text" aria-label="Search SameScene"
                     placeholder="Search series, people, or topics..."
                 >
             </div>
 
+            <span class="home-notifications" aria-hidden="true"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18l-2-3V9A7 7 0 0 0 5 9v6zM9 21a3 3 0 0 0 6 0"/></svg><small>3</small></span>
             <button class="login-button" id="loginButton">
-                <span class="user-symbol">👤</span>
+                <img src="images/home/avatar.png" class="home-avatar" alt="">
                 Log In
             </button>
 
@@ -138,22 +144,23 @@
         <section class="hero">
 
             <div class="hero-content">
+                <p class="hero-eyebrow">THAI GL SERIES COMMUNITY</p>
 
                 <h2>
                     Discover <span>Thai GL</span> Series
                 </h2>
 
-                <h3>Watch. Share. Connect.</h3>
+                <h3>Watch. <span>Share. Connect.</span></h3>
 
                 <p>
                     Explore Thai GL series, read and share comments,<br>
                     and meet people who share your interests.
                 </p>
 
-                <button class="explore-button">
+                <a class="explore-button" href="series.html">
                     Explore Series
                     <span>→</span>
-                </button>
+                </a>
 
             </div>
 
@@ -169,6 +176,7 @@
                 <span class="hero-heart">♡</span>
             </div>
 
+            <div class="hero-caption">A SAFE SPACE FOR<br>GL FANS AROUND THE WORLD</div>
         </section>
 
 
@@ -178,116 +186,74 @@
 
             <div class="section-heading">
                 <h2>Popular Series</h2>
-                <a href="#">View all →</a>
+                <a href="series.html">View all →</a>
             </div>
 
             <div class="series-grid">
 
                 <article class="series-card">
-
-                    <div class="poster poster-blank">
-                        <span>Blank</span>
+                    <img class="home-poster" src="images/home/blank.png" alt="">
+                    <div class="home-card-info">
+                        <h3>Blank</h3>
+                        <span>the Series</span>
+                        <p>2024 <span aria-hidden="true">·</span> 12 Episodes</p>
                     </div>
-
-                    <div class="series-info">
-                        <div>
-                            <h3>Blank the Series</h3>
-                            <p>2024</p>
-                        </div>
-
-                        <button class="heart-button">♡</button>
-                    </div>
-
+                    <button type="button" class="heart-button" aria-label="Add Blank to favorites"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 9 8.8-9a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
                 </article>
 
 
                 <article class="series-card">
-
-                    <div class="poster poster-affair">
-                        <span>Affair</span>
+                    <img class="home-poster" src="images/home/affair.png" alt="">
+                    <div class="home-card-info">
+                        <h3>Affair</h3>
+                        <span>the series</span>
+                        <p>2024 <span aria-hidden="true">·</span> 10 Episodes</p>
                     </div>
-
-                    <div class="series-info">
-                        <div>
-                            <h3>Affair</h3>
-                            <p>2024</p>
-                        </div>
-
-                        <button class="heart-button">♡</button>
-                    </div>
-
+                    <button type="button" class="heart-button" aria-label="Add Affair to favorites"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 9 8.8-9a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
                 </article>
 
 
                 <article class="series-card">
-
-                    <div class="poster poster-loyal">
-                        <span>The Loyal Pin</span>
+                    <img class="home-poster" src="images/home/loyal.png" alt="">
+                    <div class="home-card-info">
+                        <h3>The Loyal Pin</h3>
+                        
+                        <p>2024 <span aria-hidden="true">·</span> 16 Episodes</p>
                     </div>
-
-                    <div class="series-info">
-                        <div>
-                            <h3>The Loyal Pin</h3>
-                            <p>2024</p>
-                        </div>
-
-                        <button class="heart-button">♡</button>
-                    </div>
-
+                    <button type="button" class="heart-button" aria-label="Add The Loyal Pin to favorites"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 9 8.8-9a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
                 </article>
 
 
                 <article class="series-card">
-
-                    <div class="poster poster-gap">
-                        <span>GAP</span>
+                    <img class="home-poster" src="images/home/gap.png" alt="">
+                    <div class="home-card-info">
+                        <h3>GAP</h3>
+                        <span>the series</span>
+                        <p>2022 <span aria-hidden="true">·</span> 12 Episodes</p>
                     </div>
-
-                    <div class="series-info">
-                        <div>
-                            <h3>GAP</h3>
-                            <p>2022</p>
-                        </div>
-
-                        <button class="heart-button">♡</button>
-                    </div>
-
+                    <button type="button" class="heart-button" aria-label="Add GAP to favorites"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 9 8.8-9a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
                 </article>
 
 
                 <article class="series-card">
-
-                    <div class="poster poster-reverse">
-                        <span>Reverse 4 You</span>
+                    <img class="home-poster" src="images/home/reverse.png" alt="">
+                    <div class="home-card-info">
+                        <h3>Reverse 4 You</h3>
+                        
+                        <p>2024 <span aria-hidden="true">·</span> 12 Episodes</p>
                     </div>
-
-                    <div class="series-info">
-                        <div>
-                            <h3>Reverse 4 You</h3>
-                            <p>2024</p>
-                        </div>
-
-                        <button class="heart-button">♡</button>
-                    </div>
-
+                    <button type="button" class="heart-button" aria-label="Add Reverse 4 You to favorites"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 9 8.8-9a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
                 </article>
 
 
                 <article class="series-card">
-
-                    <div class="poster poster-235">
-                        <span>23.5</span>
+                    <img class="home-poster" src="images/home/235.png" alt="">
+                    <div class="home-card-info">
+                        <h3>23.5</h3>
+                        
+                        <p>2024 <span aria-hidden="true">·</span> 8 Episodes</p>
                     </div>
-
-                    <div class="series-info">
-                        <div>
-                            <h3>23.5</h3>
-                            <p>2024</p>
-                        </div>
-
-                        <button class="heart-button">♡</button>
-                    </div>
-
+                    <button type="button" class="heart-button" aria-label="Add 23.5 to favorites"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 9 8.8-9a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
                 </article>
 
             </div>
@@ -301,122 +267,104 @@
 
             <div class="section-heading">
                 <h2>Recently Added</h2>
-                <a href="#">View all →</a>
+                <a href="series.html">View all →</a>
             </div>
 
             <div class="series-grid">
 
                 <article class="series-card">
-
-                    <div class="poster poster-pluto">
-                        <span>Pluto</span>
+                    <img class="home-poster" src="images/home/pluto.png" alt="">
+                    <div class="home-card-info">
+                        <h3>Pluto</h3>
+                        
+                        <p>2024 <span aria-hidden="true">·</span> 12 Episodes</p>
                     </div>
-
-                    <div class="series-info">
-                        <div>
-                            <h3>Pluto</h3>
-                            <p>2024</p>
-                        </div>
-
-                        <button class="heart-button">♡</button>
-                    </div>
-
+                    <button type="button" class="heart-button" aria-label="Add Pluto to favorites"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 9 8.8-9a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
                 </article>
 
 
                 <article class="series-card">
-
-                    <div class="poster poster-us">
-                        <span>Us</span>
+                    <img class="home-poster" src="images/home/us.png" alt="">
+                    <div class="home-card-info">
+                        <h3>Us</h3>
+                        
+                        <p>2025 <span aria-hidden="true">·</span> 12 Episodes</p>
                     </div>
-
-                    <div class="series-info">
-                        <div>
-                            <h3>Us</h3>
-                            <p>2025</p>
-                        </div>
-
-                        <button class="heart-button">♡</button>
-                    </div>
-
+                    <button type="button" class="heart-button" aria-label="Add Us to favorites"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 9 8.8-9a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
                 </article>
 
 
                 <article class="series-card">
-
-                    <div class="poster poster-secret">
-                        <span>The Secret of Us</span>
+                    <img class="home-poster" src="images/home/secret.png" alt="">
+                    <div class="home-card-info">
+                        <h3>The Secret of Us</h3>
+                        
+                        <p>2024 <span aria-hidden="true">·</span> 12 Episodes</p>
                     </div>
-
-                    <div class="series-info">
-                        <div>
-                            <h3>The Secret of Us</h3>
-                            <p>2024</p>
-                        </div>
-
-                        <button class="heart-button">♡</button>
-                    </div>
-
+                    <button type="button" class="heart-button" aria-label="Add The Secret of Us to favorites"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 9 8.8-9a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
                 </article>
 
 
                 <article class="series-card">
-
-                    <div class="poster poster-love">
-                        <span>Love Senior</span>
+                    <img class="home-poster" src="images/home/love.png" alt="">
+                    <div class="home-card-info">
+                        <h3>Love Senior</h3>
+                        <span>the series</span>
+                        <p>2023 <span aria-hidden="true">·</span> 10 Episodes</p>
                     </div>
-
-                    <div class="series-info">
-                        <div>
-                            <h3>Love Senior</h3>
-                            <p>2023</p>
-                        </div>
-
-                        <button class="heart-button">♡</button>
-                    </div>
-
+                    <button type="button" class="heart-button" aria-label="Add Love Senior to favorites"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 9 8.8-9a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
                 </article>
 
 
                 <article class="series-card">
-
-                    <div class="poster poster-apple">
-                        <span>Apple My Love</span>
+                    <img class="home-poster" src="images/home/apple.png" alt="">
+                    <div class="home-card-info">
+                        <h3>Apple My Love</h3>
+                        
+                        <p>2024 <span aria-hidden="true">·</span> 10 Episodes</p>
                     </div>
-
-                    <div class="series-info">
-                        <div>
-                            <h3>Apple My Love</h3>
-                            <p>2024</p>
-                        </div>
-
-                        <button class="heart-button">♡</button>
-                    </div>
-
+                    <button type="button" class="heart-button" aria-label="Add Apple My Love to favorites"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 9 8.8-9a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
                 </article>
 
 
                 <article class="series-card">
-
-                    <div class="poster poster-petrichor">
-                        <span>Petrichor</span>
+                    <img class="home-poster" src="images/home/petrichor.png" alt="">
+                    <div class="home-card-info">
+                        <h3>Petrichor</h3>
+                        <span>the series</span>
+                        <p>2024 <span aria-hidden="true">·</span> 10 Episodes</p>
                     </div>
-
-                    <div class="series-info">
-                        <div>
-                            <h3>Petrichor</h3>
-                            <p>2024</p>
-                        </div>
-
-                        <button class="heart-button">♡</button>
-                    </div>
-
+                    <button type="button" class="heart-button" aria-label="Add Petrichor to favorites"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 9 8.8-9a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
                 </article>
 
             </div>
 
         </section>
 
+        <section class="home-tiles" aria-label="Community">
+            <article class="home-tile"><span class="home-tile-icon"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21 11.5a8.5 8.5 0 0 1-9 8.5 9.5 9.5 0 0 1-4-.9L3 21l1.7-4.5A8.3 8.3 0 0 1 3 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/>
+        <path d="M8 11.5h.01"/>
+        <path d="M12 11.5h.01"/>
+        <path d="M16 11.5h.01"/>
+    </svg></span><div><h3>Join the Conversation</h3><p>Share your thoughts, theories, and favorite moments.</p></div></article>
+            <a class="home-tile" href="fan-groups.html"><span class="home-tile-icon"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="8" r="3"/>
+        <circle cx="5.5" cy="10" r="2.3"/>
+        <circle cx="18.5" cy="10" r="2.3"/>
+
+        <path d="M7 19v-1.5c0-2.5 2.2-4.5 5-4.5s5 2 5 4.5V19"/>
+        <path d="M2 19v-1c0-2 1.5-3.5 3.5-3.5.8 0 1.5.2 2.1.6"/>
+        <path d="M22 19v-1c0-2-1.5-3.5-3.5-3.5-.8 0-1.5.2-2.1.6"/>
+    </svg></span><div><h3>Find Your People</h3><p>Join fan groups and connect with GL fans worldwide.</p></div></a>
+            <article class="home-tile"><span class="home-tile-icon"><svg class="menu-icon menu-icon-outline" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 10h16v11H4z"/>
+        <path d="M3 7h18v4H3z"/>
+        <path d="M12 7v14"/>
+        <path d="M12 7H8.5a2.5 2.5 0 1 1 2.5-2.5L12 7z"/>
+        <path d="M12 7h3.5A2.5 2.5 0 1 0 13 4.5L12 7z"/>
+    </svg></span><div><h3>Open a New Connection</h3><p>Try our Blind Box and discover new people.</p></div></article>
+        </section>
     </main>
 
 
@@ -476,6 +424,7 @@
 
 
     <script src="script.js"></script>
+    <script src="home.js"></script>
 
 </body>
 </html>
